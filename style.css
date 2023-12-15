@@ -1,0 +1,163 @@
+ /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding:0;
+  font:inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  color: rgb(137, 161, 172);
+  line-height: 1.5;
+  /*background-image: url('images/background.jpg');*/
+  background-repeat: no-repeat;
+  background: #130f4f;
+  background: radial-gradient(ellipse farthest-corner at top left, rgb(29, 27, 48) 0%, rgb(79, 20, 93) 100%);
+  background-size: cover;
+  margin: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#menu {
+	background: #78296f;
+	background: linear-gradient(to right,  #672a6d,  #832655);
+	padding-left: 10%;
+	border-radius: 15px;
+  font-size: 1vw;
+}
+#menu ul {
+	width: 100%;
+	text-align: left;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #0099CC;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 140px;
+	background: #68265e;
+  border-radius: 10px;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 100%){
+	#menu input {z-index:4}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+#title {
+  margin: 10% 40% 20% 8%;
+} 
+#minititle {
+  font-size: 1.5vw;
+  margin-left: 6%;
+}
+
+/* title anim */
+svg {
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 6s 2s infinite alternate;
+	stroke-width: 2;
+	stroke: #365FA0;
+	font-size: 7vw;
+  fill:transparent;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(239, 244, 248, 0); stroke: rgb(164, 178, 200);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(228, 233, 238, 0); stroke: rgb(164, 178, 200); }
+	80%  {fill: rgba(226, 230, 234, 0); stroke: rgb(164, 178, 200); stroke-width: 3; }
+	100% {
+		fill: rgba(3, 10, 17, 0); stroke: rgb(164, 178, 200);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
