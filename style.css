@@ -182,3 +182,16 @@ picture {
 #aca p{
   text-align: center;
 }
+footer {
+    background-color: #333; /* Change the color as needed */
+    color: #fff; /* Text color */
+    padding: 20px; /* Adjust padding to your liking */
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px; /* Adjust the width of your content */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+
