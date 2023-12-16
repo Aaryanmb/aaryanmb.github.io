@@ -140,14 +140,25 @@ svg text {
 }
 @keyframes stroke {
 	0%   {
-		fill: rgba(239, 244, 248, 0); stroke: rgb(164, 178, 200);
-		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+		fill: rgba(239, 244, 248, 0);
+    stroke: rgb(164, 178, 200);
+		stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
 	}
-	70%  {fill: rgba(228, 233, 238, 0); stroke: rgb(164, 178, 200); }
-	80%  {fill: rgba(226, 230, 234, 0); stroke: rgb(164, 178, 200); stroke-width: 3; }
+	70%  {
+    fill: rgba(228, 233, 238, 0); 
+    stroke: rgb(164, 178, 200); }
+	80%  {
+    fill: rgba(226, 230, 234, 0);
+    stroke: rgb(164, 178, 200);
+    stroke-width: 3; }
 	100% {
-		fill: rgba(3, 10, 17, 0); stroke: rgb(164, 178, 200);
-		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+		fill: rgba(3, 10, 17, 0);
+    stroke: rgb(164, 178, 200);
+		stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
 	}
 }
 /* A elements that don't have a class get default styles */
@@ -160,4 +171,14 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+#aca {
+  margin: 10% 30%;
+}
+#aca h1 {
+  font-size: 5vw;
+  text-align: center;
+}
+#aca p{
+  text-align: center;
 }
