@@ -36,14 +36,14 @@ body {
   background: radial-gradient(ellipse farthest-corner at top left, rgb(29, 27, 48) 0%, rgb(79, 20, 93) 100%);
   background-size: cover;
   margin: 5%;
-  font-family: Arial, Helvetica, sans-serif;
 }
 #menu {
 	background: #78296f;
 	background: linear-gradient(to right,  #672a6d,  #832655);
 	padding-left: 10%;
+	padding-right: 10%;
 	border-radius: 15px;
-  font-size: 1vw;
+  	font-size: 1vw;
 }
 #menu ul {
 	width: 100%;
@@ -87,7 +87,6 @@ body {
 #menu label:before {
 	color: #FFFFFF;
 	content: "\2261"; 
-	margin-left: 20px;
 }
 #menu ul.sub-menus{
 	height: auto;
@@ -111,7 +110,7 @@ body {
 }
 #menu ul.sub-menus a:hover{
 	background: #F2F2F2;
-	color: #444444;
+	color: #0099CC;
 }
 @media screen and (max-width: 100%){
 	#menu input {z-index:4}
@@ -120,18 +119,21 @@ body {
 	#menu input:checked ~ ul {display:block}
 }
 #title {
-  margin: 10% 40% 20% 8%;
-} 
+	margin-top: 10%;
+	margin-bottom:50%;
+	text-align: center;
+}
 #minititle {
   font-size: 1.5vw;
   margin-left: 6%;
+  text-align: center;
 }
 
 /* title anim */
 svg {
 	width: 100%; height: 100%;
 }
-svg text {
+#title svg text {
 	animation: stroke 6s 2s infinite alternate;
 	stroke-width: 2;
 	stroke: #365FA0;
@@ -161,24 +163,116 @@ svg text {
     stroke-width: 0;
 	}
 }
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+.content_home {
+	background-color: #44165d;
+	margin: 10%;
+	border-radius: 10px;
+	padding: 100px;
+	font-size: 2vw;
 }
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
-  display: block;
+  height:auto;
+  object-fit: cover;
 }
-#aca {
-  margin: 10% 30%;
+
+#aca1 {
+  margin: 10% 30% 40% 30%;
 }
-#aca h1 {
-  font-size: 5vw;
+#aca1 h1 {
+  font-size: 6vw;
   text-align: center;
 }
-#aca p{
+#aca1 p{
   text-align: center;
+  font-size: 1.5vw;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #5f358b;
+	border-radius: 10px;
+}
+  
+  .item {
+	width: 44%;
+	margin: 10px;
+	font-size: 1vw;
+  }
+  .item>img{
+	width: 100%;
+	margin: 10%;
+	border-radius: 10px;
+  }
+  .item>p{
+	padding: 10% 10% 10% 8%;
+  }
+  @media (max-width: 768px) {
+	.item {
+	  width: 100%;
+	}
+  }
+  .acacont{
+	text-align:center;
+	font-size: 4vw;
+  }
+  .acatext{
+	font-size: 1.2vw;
+  }
+
+  .servcont{
+	text-align:center;
+	font-size: 3vw;
+  }
+.servtitle{
+	margin: 10% 20% 40% 20%;
+	text-align: center;
+}
+.servtitle>h1{
+	font-size: 5vw;
+}
+.servtitle>p{
+	font-size: 2vw;
+}
+.containerserv {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #5f358b;
+	border-radius: 10px;
+}
+.servtext{
+  font-size: 2vw;
+}
+  .item {
+	width: 44%;
+	margin: 10px;
+	font-size: 1vw;
+  }
+  .item>img{
+	width: 100%;
+	margin: 10%;
+	border-radius: 10px;
+  }
+  .item>p{
+	padding: 10% 10% 10% 8%;
+  }
+.aboutus{
+	text-align: center;
+	margin:10% 10% 10% 10%;
+}
+.aboutus>h1{
+	font-size: 5vw;
+}
+
+.aboutus>p{
+	font-size: 1.5vw;
+}
+.footer-container{
+	font-size: 1.5vw;
+	background-color: #050414;
+	padding: 5%;
+	border-radius: 10px;
 }
