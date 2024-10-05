@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Planner</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Route Planner</h1>
+    <form method="POST">
+        <label for="start_lat">Start Latitude:</label>
+        <input type="text" name="start_lat" required><br><br>
+        <label for="start_lon">Start Longitude:</label>
+        <input type="text" name="start_lon" required><br><br>
+        <label for="end_lat">End Latitude:</label>
+        <input type="text" name="end_lat" required><br><br>
+        <label for="end_lon">End Longitude:</label>
+        <input type="text" name="end_lon" required><br><br>
+        <label for="waypoints">Number of Waypoints:</label>
+        <input type="number" name="waypoints" value="3" required><br><br>
+        <input type="submit" value="Generate Route">
+    </form>
+
+    {% if map_html %}
+    <h2>Route Map</h2>
+    <div id="map">{{ map_html|safe }}</div>
+    <h3>Total Distance: {{ total_distance }} km</h3>
+    {% endif %}
+</body>
+
+</html>
